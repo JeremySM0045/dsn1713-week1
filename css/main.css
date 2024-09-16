@@ -5,7 +5,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -20,7 +22,10 @@ img {
   height: auto;
 }
 
-h1, h2, h3, button {
+h1,
+h2,
+h3,
+button {
   font-family: "Anton", sans-serif;
 }
 
@@ -28,7 +33,7 @@ h1 {
   color: #fff;
   font-size: 4.209rem;
   text-align: center;
-  text-shadow: 2px 3px 4px rgba(0,0,0,0.6);
+  text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
 }
 
 h2 {
@@ -46,7 +51,7 @@ h3 {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1em ;
+  padding: 0 1em;
 }
 
 #logo {
@@ -90,8 +95,98 @@ header nav a:focus {
   background-repeat: no-repeat;
   background-size: cover;
 
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+
+section {
+  margin: 4em 0;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+.product-card {
+  border-radius: 14px;
+  padding: 2em 1.25em;
+  margin-bottom: 1em;
+  color: #fff;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.product-card:nth-child(1) {
+  background-color: #e1729a;
+}
+
+.product-card:nth-child(2) {
+  background-color: #c78ec7;
+}
+
+.product-card:nth-child(3) {
+  background-color: #f94822;
+}
+
+.product-card:nth-child(4) {
+  background-color: #e295eb;
+}
+
+.product p {
+  margin: .5em 0;
+}
+
+.price {
+  margin-top: auto;
+  font-weight: bold;
+  margin-bottom: 2em;
+  color: #fff;
+
+}
+
+.product-card button {
+  display: inline-block;
+  padding: .5em 1.5em;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  color: #F54F95;
+  font-size: 1.125rem;
+  cursor: pointer;
+
+  margin-top: auto;
+}
+
+.product-card button:hover,
+.product-card button:focus {
+  background-color: #F54F95;
+  color: #fff;
+}
+
+footer {
+  background-color: #F54F95;
+  padding: .5em 0;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+
+  .product-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (min-width: 1080px) {
+  .product-container {
+    grid-template-columns: 4fr 4fr;
+  }
 }
